@@ -4,15 +4,14 @@ import { useForm, Controller, FormProvider, useFormContext } from "react-hook-fo
 
 function getSteps() {
   return [
-    "Basic information",
-    "Contact Information",
-    "Personal Information",
-    "Payment",
+    "Campaign Info",
+    "Budget & Targeting",
+    "Profiling",
   ];
 }
 
 //First
-const BasicForm = () => {
+const CampaignInfo = () => {
   const [campaignBanner, setCampaignBanner] = useState(null);
   const [campaignName, setCampaignName] = useState("");
   const [brandName, setBrandName] = useState("");
@@ -91,6 +90,12 @@ const BasicForm = () => {
 
   const headingStyle = {
     marginBottom: "10px",
+    color: "#000",
+    fontFamily: "Montserrat",
+    fontSize: "20px",
+    fontStyle: "normal",
+    fontWeight: 600,
+    lineHeight: "normal",
   };
 
   const labelStyle = {
@@ -388,7 +393,7 @@ const BasicForm = () => {
 
 
 // Second
-const ContactForm = () => {
+const BudgetAndTargeting = () => {
   const [campaignBudget, setCampaignBudget] = useState("");
   const [creatorGender, setCreatorGender] = useState("");
   const [creatorLocation, setCreatorLocation] = useState("");
@@ -454,13 +459,13 @@ const ContactForm = () => {
 
   const headingStyle = {
     marginBottom: "10px",
-
     color: "#000",
     fontFamily: "Montserrat",
     fontSize: "20px",
     fontStyle: "normal",
     fontWeight: 600,
     lineHeight: "normal",
+    marginTop: "20px"
   };
 
   const labelStyle = {
@@ -720,7 +725,7 @@ const ContactForm = () => {
 };
 
 
-const PersonalForm = () => {
+const Profiling = () => {
   const { control } = useFormContext();
   return (
     <>
@@ -729,23 +734,14 @@ const PersonalForm = () => {
   );
 };
 
-const PaymentForm = () => {
-  const { control } = useFormContext();
-  return (
-    <>
-      {/* Payment form fields */}
-    </>
-  );
-};
-
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <BasicForm />;
+      return <CampaignInfo />;
     case 1:
-      return <ContactForm />;
+      return <BudgetAndTargeting />;
     case 2:
-      return <PersonalForm />;
+      return <Profiling />;
     default:
       return "unknown step";
   }
@@ -816,7 +812,7 @@ const FormCampaign = () => {
       ) : (
         <>
           <FormProvider {...methods}>
-            <form>
+            <form style = {{marginTop: "80px"}}>
               {getStepContent(activeStep)}
 
               <Button

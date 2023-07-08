@@ -1,6 +1,7 @@
 import React from "react";
 
-export const Dashboard = () => {
+
+const Dash = () => {
   const dashboardStyle = {
     display: "grid",
     gridTemplateColumns: "1fr",
@@ -15,6 +16,8 @@ export const Dashboard = () => {
 
   const cardStyle = {
     flex: 1,
+    width: "192px",
+    height: "169px",
     backgroundColor: "#fff",
     margin: "80px",
     borderRadius: "8px",
@@ -30,7 +33,6 @@ export const Dashboard = () => {
     left: 0,
     width: "100%",
     height: "60%",
-    background: "linear-gradient(21deg, #112148 0%, #091227 100%)",
     borderRadius: "8px 8px 0 0",
   };
 
@@ -129,6 +131,8 @@ export const Dashboard = () => {
     fontStyle: "normal",
     fontWeight: "500",
     lineHeight: "normal",
+    marginTop: "30px",
+    marginBottom: "30px"
   };
 
   const belowTypography = {
@@ -259,3 +263,5 @@ export const Dashboard = () => {
     </div>
   );
 };
+
+export default Dash;

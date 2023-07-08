@@ -1,6 +1,6 @@
 import React from "react";
 
-export const DashboardSecond = () => {
+const DashboardSecond = () => {
   const pageStyle = {
     padding: "20px",
   };
@@ -194,3 +194,5 @@ export const DashboardSecond = () => {
     </div>
   );
 };
+
+export default DashboardSecond;

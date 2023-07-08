@@ -2,9 +2,9 @@
 
 import React from 'react';
 import Sidebar from '../SideNavbar'; // Import the Sidebar component
-import FormCampaign from '../CampaignCreate';
+import DashboardSecond from '../DashboardSecond';
 
-const Create = () => {
+const Dashb = () => {
 
   const main = {
     display: 'flex',
@@ -22,14 +22,10 @@ const Create = () => {
 
       {/* Content */}
       <div style={secondOne}>
-        <div style={{marginBottom: "20px", fontWeight: 600}}>
-          <h2>Campaign</h2>
-        </div>
-        {/* TABLE */}
-        <FormCampaign />
+        <DashboardSecond />
       </div>
     </div>
   );
 };
 
-export default Create;
+export default Dashb;
