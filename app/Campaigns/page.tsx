@@ -3,6 +3,7 @@
 import AddCircleIcon from '@mui/icons-material/AddCircle';
 import { Button } from "@mui/material";
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import EnhancedTable from '../CampaignTable';
 
 
@@ -11,6 +12,12 @@ export default function Campaigns() {
 
     const handleTabClick = (tab) => {
         setSelectedTab(tab);
+    };
+
+    const history = useHistory();
+
+    const handleCreateClick = () => {
+      history.push('/Create');
     };
 
     return (
@@ -22,6 +29,7 @@ export default function Campaigns() {
                 <Button style={{ textTransform: 'none', fontFamily: 'Montserrat' }}
                     sx={{ borderRadius: 2, backgroundColor: "#111E4D" }}
                     variant="contained"
+                    onClick={handleCreateClick}
                     startIcon={<AddCircleIcon className='text-darkPurpur' />} className="px-4 py-2
                      bg-navyBlue hover:bg-navyBlue3 text-white
                      text-16 font-medium leading-normal"

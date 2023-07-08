@@ -96,6 +96,7 @@ const CampaignInfo = () => {
     fontStyle: "normal",
     fontWeight: 600,
     lineHeight: "normal",
+    marginTop: "20px"
   };
 
   const labelStyle = {

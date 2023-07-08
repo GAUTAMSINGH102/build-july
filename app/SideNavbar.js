@@ -9,11 +9,13 @@ const Sidebar = () => {
   // Sidebar styles
   const sidebarStyle = {
     width: '219px',
-    height: '150vh',
     color: '#fff',
     padding: '20px',
     borderRight: '13px solid #333EA0',
     background: 'linear-gradient(230deg, #0F0A1C 0%, #0F091B 0%, #112148 100%)',
+    top: 0,
+    bottom: 0,
+    overflowY: 'auto',
   };
 
   // Logo styles
