@@ -751,7 +751,7 @@ function getStepContent(step) {
   }
 }
 
-export const FormCampaign = () => {
+const FormCampaign = () => {
   const methods = useForm({
     defaultValues: {
       firstName: "",
@@ -849,3 +849,5 @@ export const FormCampaign = () => {
     </div>
   );
 };
+
+export default FormCampaign;
